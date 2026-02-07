@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -156,10 +160,11 @@
         <a href="#">Datenschutz</a>
         <a href="#">AGB</a>
       </div>
-      <div class="footer-copy">© <span id="year"></span> Don't Waste My Time.</div>
+      <div class="footer-copy">© {{ "now" | date: "%Y" }} {{ site.title }}</div>
     </div>
   </footer>
 
   <script src="main.js"></script>
 </body>
 </html>
+
