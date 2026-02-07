@@ -1,0 +1,15 @@
+<div class="nav-full">
+  <div class="page">
+    <nav class="nav" aria-label="Primary">
+      {% assign current = page.url %}
+      <a class="nav-item {% if current == '/' %}active{% endif %}"
+         href="{{ '/' | relative_url }}">Home</a>
+
+      <a class="nav-item {% if current contains '/good/' %}active{% endif %}"
+         href="{{ '/good/' | relative_url }}">Books That Didn't Waste My Time</a>
+
+      <a class="nav-item {% if current contains '/bad/' %}active{% endif %}"
+         href="{{ '/bad/' | relative_url }}">Books That Wasted My Time</a>
+    </nav>
+  </div>
+</div>
