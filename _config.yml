@@ -1,3 +1,5 @@
 title: Don't Waste My Time.
 markdown: kramdown
 permalink: /:categories/:title/
+url: "https://pleasedontwastemytime26-arch.github.io"
+baseurl: "/book-blog"
