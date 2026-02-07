@@ -1,0 +1,51 @@
+{% comment %}
+Usage:
+  {% include post-card.html post=post %}
+Requires in post front matter:
+  cover: assets/images/covers/xxx.jpg
+  excerpt: "..."
+Optional:
+  author: "Don't Waste My Time 👑"
+  views: 0
+  comments: 0
+{% endcomment %}
+
+{% assign p = include.post %}
+{% assign words = p.content | number_of_words %}
+{% assign wpm = site.words_per_minute | default: 200 %}
+{% assign minutes = words | divided_by: wpm | plus: 1 %}
+{% assign author = p.author | default: site.title %}
+
+<article class="post-card">
+  <div class="post-media">
+    {% if p.cover %}
+      <img src="{{ p.cover | relative_url }}" alt="Cover of {{ p.title }}">
+    {% else %}
+      <div class="cover-placeholder">No cover</div>
+    {% endif %}
+  </div>
+
+  <div class="post-body">
+    <div class="post-meta">
+      <span class="avatar">D</span>
+      <span>{{ author }}</span>
+    </div>
+
+    <p class="post-time">
+      {{ p.date | date: "%d.%m.%Y" }} · {{ minutes }} Min. Reading Time
+    </p>
+
+    <h2 class="post-title">
+      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+    </h2>
+
+    {% if p.excerpt %}
+      <p class="post-excerpt">{{ p.excerpt }}</p>
+    {% endif %}
+
+    <div class="post-footer">
+      <span>{{ p.views | default: 0 }} Views </span>
+      <span>{{ p.comments | default: 0 }} Comments </span>
+    </div>
+  </div>
+</article>
