@@ -3,3 +3,4 @@ markdown: kramdown
 permalink: /:categories/:title/
 url: "https://pleasedontwastemytime26-arch.github.io"
 baseurl: "/book-blog"
+words_per_minute: 200
