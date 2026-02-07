@@ -11,7 +11,7 @@ body{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, san
 
 /* THE ONE CONTAINER */
 .page{
-  width: min(1100px, 92vw);
+  width: min(800px, 92vw);
   margin: 0 auto;
 }
 
@@ -37,33 +37,51 @@ a:hover{ text-decoration:underline; }
   font-size: clamp(40px, 6vw, 78px);
 }
 
-.nav-wrap{
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+/* FULL-WIDTH NAV BACKGROUND + LINES */
+.nav-full{
+  width: 100vw;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+
+  /* avoid horizontal scroll from 100vw */
+  margin-left: calc(50% - 50vw);
 }
 
+/* actual nav layout */
 .nav{
-  display:grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* nav items */
 .nav-item{
   padding: 12px 10px;
   font-size: 12px;
-  text-align:center;
-  border-left: 1px solid var(--line);
+  text-align: center;
+  border-left: 1px solid #111;
 }
-.nav-item:first-child{ border-left:none; }
+
+.nav-item:first-child{
+  border-left: none;
+}
+
+.nav-item.active{
+  color: #6a00ff;
+}
+
+.nav-item:first-child{ border-left:1px solid #111; }
+.nav-item:last-child{ border-right:1px solid #111; }
 .nav-item.active{ color: var(--purple); }
 
-.section{
-  padding: 34px 0;
+.section-tight{ 
+  padding: 22px 0; 
+  border-top: 1px solid var(--line);
+  margin-top: 50px;
 }
-.section-tight{ padding: 22px 0; }
 
 .section-divider{
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  padding: 22px 0; 
 }
 
 .section-label{
@@ -72,7 +90,7 @@ a:hover{ text-decoration:underline; }
   padding: 12px 26px;
   letter-spacing: .35em;
   font-size: 12px;
-  margin: 0 auto 22px;
+  margin: 30px auto;
   text-align:center;
 }
 
@@ -201,22 +219,17 @@ a:hover{ text-decoration:underline; }
 
 .two-col{
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  grid-template-columns: 1fr 1fr;  
   align-items:start;
+  width: 100%;
+}
+
+.col{
+  width: 100%;
 }
 
 .col-left{
   display:flex;
-  justify-content:center;
-}
-
-.spaced-heading{
-  margin: 0;
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: .45em;
-  text-align:center;
 }
 
 .about-text{
@@ -224,6 +237,7 @@ a:hover{ text-decoration:underline; }
   width: min(420px, 100%);
   font-size: 12px;
   line-height: 1.8;
+  text-align: justify;
 }
 
 .mt-48{ margin-top: 48px; }
