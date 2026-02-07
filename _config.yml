@@ -1,4 +1,6 @@
 title: Don't Waste My Time.
+author:
+  name: Don't Waste My Time ♔
 markdown: kramdown
 permalink: /:categories/:title/
 url: "https://pleasedontwastemytime26-arch.github.io"
