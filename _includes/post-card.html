@@ -5,7 +5,7 @@ Requires in post front matter:
   cover: assets/images/covers/xxx.jpg
   excerpt: "..."
 Optional:
-  author: "Don't Waste My Time 👑"
+  author: "Don't Waste My Time"
   views: 0
   comments: 0
 {% endcomment %}
@@ -14,7 +14,7 @@ Optional:
 {% assign words = p.content | number_of_words %}
 {% assign wpm = site.words_per_minute | default: 200 %}
 {% assign minutes = words | divided_by: wpm | plus: 1 %}
-{% assign author = p.author | default: site.title %}
+{% assign author = p.author | default: site.author.name %}
 
 <article class="post-card">
   <div class="post-media">
