@@ -1,0 +1,70 @@
+---
+layout: none
+title: Books That Wasted My Time
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ page.title }} — {{ site.title }}</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="hero" id="top">
+      <p class="kicker">I HAVE ENOUGH TO DO. SO,</p>
+      <h1 class="title">{{ site.title }}</h1>
+    </header>
+
+    <div class="nav-full">
+      <div class="page">
+        <nav class="nav">
+          <a class="nav-item" href="/">Home</a>
+          <a class="nav-item" href="/good.html">Books That Didn't Waste My Time</a>
+          <a class="nav-item active" href="/bad.html">Books That Wasted My Time</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section" id="bad">
+      <div class="section-label">{{ page.title | upcase }}</div>
+
+      <div class="posts">
+        {% for post in site.categories.bad %}
+          <article class="post-card">
+            <div class="post-media">
+              <img src="{{ post.cover }}" alt="Cover of {{ post.title }}">
+            </div>
+
+            <div class="post-body">
+              <div class="post-meta">
+                <span class="avatar">D</span><span>{{ site.title }}</span>
+              </div>
+
+              <h2 class="post-title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h2>
+
+              <p class="post-excerpt">{{ post.excerpt }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer">
+    <div class="page footer-inner">
+      <div class="footer-copy">© {{ "now" | date: "%Y" }} {{ site.title }}</div>
+    </div>
+  </footer>
+</body>
+</html>
