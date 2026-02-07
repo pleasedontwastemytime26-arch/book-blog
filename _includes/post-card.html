@@ -26,26 +26,30 @@ Optional:
   </div>
 
   <div class="post-body">
-    <div class="post-meta">
-      <span class="avatar">D</span>
-      <span>{{ author }}</span>
+    <div class="post-top">
+      <div class="post-meta">
+        <span class="avatar">D</span>
+        <span>{{ author }}</span>
+      </div>
+  
+      <div class="post-submeta">
+        <span class="post-date">{{ p.date | date: "%d.%m.%Y" }}</span>
+        <span class="dot">·</span>
+        <span class="post-readtime">{{ minutes }} Min. Lesezeit</span>
+      </div>
+  
+      <h2 class="post-title">
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      </h2>
+  
+      {% if p.excerpt %}
+        <p class="post-excerpt">{{ p.excerpt }}</p>
+      {% endif %}
     </div>
-
-    <p class="post-time">
-      {{ p.date | date: "%d.%m.%Y" }} · {{ minutes }} Min. Reading Time
-    </p>
-
-    <h2 class="post-title">
-      <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-    </h2>
-
-    {% if p.excerpt %}
-      <p class="post-excerpt">{{ p.excerpt }}</p>
-    {% endif %}
-
+  
     <div class="post-footer">
-      <span>{{ p.views | default: 0 }} Views </span>
-      <span>{{ p.comments | default: 0 }} Comments </span>
+      <span>{{ p.views | default: 0 }} Ansichten</span>
+      <span>{{ p.comments | default: 0 }} Kommentare</span>
     </div>
   </div>
 </article>
