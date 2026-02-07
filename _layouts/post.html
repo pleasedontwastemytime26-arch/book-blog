@@ -24,8 +24,10 @@ layout: default
   </p>
 
   {% if page.cover %}
-    <img src="{{ page.cover | relative_url }}" alt=""
-         style="width:100%; max-height:420px; object-fit:cover; border:1px solid rgba(0,0,0,.08);">
+    <div class="post-cover">
+      <img src="{{ page.cover | relative_url }}"
+           alt="Cover of {{ page.title }}">
+    </div>
   {% endif %}
 
   <div style="margin-top:18px; border:1px solid rgba(0,0,0,.08); padding:18px;">
