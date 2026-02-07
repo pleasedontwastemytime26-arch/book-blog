@@ -44,9 +44,9 @@ Optional:
         </a>
       </h2>
   
-      {% if p.excerpt %}
-        <p class="post-excerpt">{{ p.excerpt }}</p>
-      {% endif %}
+      <p class="post-excerpt">
+        {{ p.content | strip_html | normalize_whitespace | truncate: 220 }}
+      </p>
     </div>
   
     <div class="post-footer">
