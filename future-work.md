@@ -1,0 +1,8 @@
+- add a short review and a long one - for those people who dont want to waste their time on reading the long one
+- add a comment section
+- add a like button
+- add a goodreads button
+- in the list on the home page, add some kind of a badge WASTED TIME and NOT WASTED TIME in green or so.
+- in the lists add also start as a rating
+- add a search button
+- add categories for faster search - ya, adult
