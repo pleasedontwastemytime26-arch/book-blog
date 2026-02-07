@@ -3,7 +3,7 @@ layout: post
 title: "Belladonna"
 category: bad
 rating: 5
-cover: /assets/images/covers/belladonna.jpg
+cover: assets/images/covers/belladonna.jpg
 excerpt: "Short teaser text that appears on the homepage."
 ---
 
