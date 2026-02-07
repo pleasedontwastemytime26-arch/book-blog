@@ -9,6 +9,10 @@ layout: default
     {{ page.title }}
   </h2>
 
+  {% if page.book_author %}
+  <p class="book-author">by {{ page.book_author }}</p>
+{% endif %}
+
   {% assign words = page.content | number_of_words %}
   {% assign wpm = site.words_per_minute | default: 200 %}
   {% assign minutes = words | divided_by: wpm | plus: 1 %}
@@ -16,7 +20,7 @@ layout: default
   <p class="post-submeta" style="margin:8px 0 16px;">
     <span>{{ page.date | date: "%d.%m.%Y" }}</span>
     <span class="dot">·</span>
-    <span>{{ minutes }} Min. Lesezeit</span>
+    <span>{{ minutes }} Min. Reading Time</span>
   </p>
 
   {% if page.cover %}
