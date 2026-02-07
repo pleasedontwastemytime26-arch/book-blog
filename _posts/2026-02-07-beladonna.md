@@ -3,7 +3,7 @@ layout: post
 title: "Belladonna"
 category: bad
 rating: 5
-cover: https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.thalia.de%2Fshop%2Fhome%2Fartikeldetails%2FA1066365142&ved=0CBYQjRxqFwoTCLjAs8Ohx5IDFQAAAAAdAAAAABAI&opi=89978449
+cover: /assets/images/covers/belladonna.jpg
 excerpt: "Short teaser text that appears on the homepage."
 ---
 
