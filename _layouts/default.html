@@ -3,18 +3,20 @@
 <head>
   {% include head.html %}
 </head>
-
 <body>
+
   <div class="page">
     {% include header.html %}
   </div>
 
   {% include nav.html %}
 
+  <!-- EVERYTHING that should align to the container must be inside this -->
   <main class="page">
     {{ content }}
   </main>
 
   {% include footer.html %}
+
 </body>
 </html>
