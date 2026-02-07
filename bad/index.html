@@ -1,6 +1,6 @@
 ---
 layout: none
-title: Books That Wasted My Time
+title: Books That Didn't Waste My Time
 ---
 
 <!doctype html>
@@ -19,21 +19,26 @@ title: Books That Wasted My Time
 
 <body>
   <div class="page">
+
+    <!-- HERO -->
     <header class="hero" id="top">
       <p class="kicker">I HAVE ENOUGH TO DO. SO,</p>
       <h1 class="title">{{ site.title }}</h1>
     </header>
 
+    <!-- FULL-WIDTH LINE -->
     <div class="nav-full">
+      <!-- CENTERED CONTENT -->
       <div class="page">
         <nav class="nav">
-          <a class="nav-item" href="{{ '/' | relative_url }}">Home</a>
+          <a class="nav-item active" href="{{ '/' | relative_url }}">Home</a>
           <a class="nav-item" href="{{ '/good/' | relative_url }}">Books That Didn't Waste My Time</a>
-          <a class="nav-item active" href="{{ '/bad/' | relative_url }}">Books That Wasted My Time</a>
+          <a class="nav-item" href="{{ '/bad/' | relative_url }}">Books That Wasted My Time</a>
         </nav>
       </div>
     </div>
 
+    <!-- LATEST -->
     <section class="section" id="bad">
       <div class="section-label">{{ page.title | upcase }}</div>
 
@@ -59,9 +64,8 @@ title: Books That Wasted My Time
         {% endfor %}
       </div>
     </section>
-  </div>
 
- <!-- SIGNUP (still inside same container) -->
+    <!-- SIGNUP (still inside same container) -->
     <section class="section section-tight" id="signup">
       <div class="two-col signup">
         <h2 class="col-left signup-title">Sign Up for Book Reviews</h2>
@@ -141,5 +145,7 @@ title: Books That Wasted My Time
       <div class="footer-copy">© {{ "now" | date: "%Y" }} {{ site.title }}</div>
     </div>
   </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
