@@ -138,6 +138,13 @@ a:hover{ text-decoration:underline; }
   min-height: 100%;
 }
 
+.book-author{
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0 8px;
+  font-style: italic;
+}
+
 .post-submeta{
   margin-top: 2px;
   font-size: 11px;       /* small like screenshot */
@@ -369,6 +376,7 @@ a:hover{ text-decoration:underline; }
   .signup{ flex-direction:column; align-items:center; text-align:center; }
   .row{ grid-template-columns: 1fr; }
 }
+
 
 
 
