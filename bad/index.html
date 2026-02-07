@@ -44,23 +44,7 @@ title: Books That Didn't Waste My Time
 
       <div class="posts">
         {% for post in site.categories.bad %}
-          <article class="post-card">
-            <div class="post-media">
-              <img src="{{ post.cover }}" alt="Cover of {{ post.title }}">
-            </div>
-
-            <div class="post-body">
-              <div class="post-meta">
-                <span class="avatar">D</span><span>{{ site.title }}</span>
-              </div>
-
-              <h2 class="post-title">
-                <a href="{{ post.url }}">{{ post.title }}</a>
-              </h2>
-
-              <p class="post-excerpt">{{ post.excerpt }}</p>
-            </div>
-          </article>
+          {% include post-card.html post=post %}
         {% endfor %}
       </div>
     </section>
