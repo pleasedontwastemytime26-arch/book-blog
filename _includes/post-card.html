@@ -39,7 +39,9 @@ Optional:
       </div>
   
       <h2 class="post-title">
-        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        <a href="{{ p.url | relative_url }}">
+          "{{ p.title }}"{% if p.book_author %}, by {{ p.book_author }}{% endif %}
+        </a>
       </h2>
   
       {% if p.excerpt %}
