@@ -104,7 +104,7 @@ a:hover{ text-decoration:underline; }
 .post-card{
   width: 100%;
   display:grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 25% 75%;
   border: 1px solid rgba(0,0,0,.08);
 }
 
@@ -125,7 +125,7 @@ a:hover{ text-decoration:underline; }
 
 .post-media img{
   width:100%;
-  max-width: 220px;
+  max-width: 130px;
   height:auto;
   object-fit:contain;
   display:block;
@@ -333,6 +333,7 @@ a:hover{ text-decoration:underline; }
   .signup{ flex-direction:column; align-items:center; text-align:center; }
   .row{ grid-template-columns: 1fr; }
 }
+
 
 
 
