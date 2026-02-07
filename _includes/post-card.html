@@ -35,7 +35,7 @@ Optional:
       <div class="post-submeta">
         <span class="post-date">{{ p.date | date: "%d.%m.%Y" }}</span>
         <span class="dot">·</span>
-        <span class="post-readtime">{{ minutes }} Min. Lesezeit</span>
+        <span class="post-readtime">{{ minutes }} Min. Reading Time</span>
       </div>
   
       <h2 class="post-title">
@@ -48,8 +48,8 @@ Optional:
     </div>
   
     <div class="post-footer">
-      <span>{{ p.views | default: 0 }} Ansichten</span>
-      <span>{{ p.comments | default: 0 }} Kommentare</span>
+      <span>{{ p.views | default: 0 }} Views</span>
+      <span>{{ p.comments | default: 0 }} Comments</span>
     </div>
   </div>
 </article>
