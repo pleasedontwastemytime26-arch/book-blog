@@ -43,12 +43,12 @@ layout: none
 
       <div class="posts">
         {% for post in site.posts limit: 5 %}
-          <article class="post-card">
-            <div class="post-media">
+          <article class="two-col post-card">
+            <div class="left-col-post post-media">
               <img src="{{ post.cover }}" alt="Cover of {{ post.title }}">
             </div>
       
-            <div class="post-body">
+            <div class="right-col-post post-body">
               <div class="post-meta">
                 <span class="avatar">D</span><span>{{ site.title }}</span>
               </div>
@@ -148,6 +148,7 @@ layout: none
   <script src="main.js"></script>
 </body>
 </html>
+
 
 
 
