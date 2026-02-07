@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Belladonna"
+book_author: Adalyn Grace
 category: bad
-rating: 5
+rating: 3
 cover: assets/images/covers/belladonna.jpg
 excerpt: "Short teaser text that appears on the homepage."
 ---
