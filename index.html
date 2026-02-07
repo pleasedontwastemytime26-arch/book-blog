@@ -7,7 +7,7 @@ layout: none
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Don't Waste My Time</title>
+  <title>{{ site.title }}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@ layout: none
     <!-- HERO -->
     <header class="hero" id="top">
       <p class="kicker">I HAVE ENOUGH TO DO. SO,</p>
-      <h1 class="title">Don't Waste My Time</h1>
+      <h1 class="title">{{ site.title }}</h1>
     </header>
 
     <!-- FULL-WIDTH LINE -->
@@ -42,44 +42,25 @@ layout: none
       <div class="section-label">LATEST REVIEWS</div>
 
       <div class="posts">
-        <article class="post-card">
-          <div class="post-media">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="">
-          </div>
-          <div class="post-body">
-            <div class="post-meta">
-              <span class="avatar">D</span><span>Don't Waste My Time</span>
+        {% for post in site.posts limit: 10 %}
+          <article class="post-card">
+            <div class="post-media">
+              <img src="{{ post.cover }}" alt="">
             </div>
-            <h2 class="post-title">Wie du deine Zeit sinnvoll nutzt und Stress reduzierst</h2>
-            <p class="post-excerpt">In der heutigen schnelllebigen Welt fühlen sich viele Menschen überfordert und gestresst…</p>
-          </div>
-        </article>
 
-        <article class="post-card">
-          <div class="post-media">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="">
-          </div>
-          <div class="post-body">
-            <div class="post-meta">
-              <span class="avatar">D</span><span>Don't Waste My Time</span>
-            </div>
-            <h2 class="post-title">Effizientes Zeitmanagement für mehr Produktivität</h2>
-            <p class="post-excerpt">In der heutigen schnelllebigen Welt ist Zeitmanagement eine der entscheidendsten Fähigkeiten…</p>
-          </div>
-        </article>
+            <div class="post-body">
+              <div class="post-meta">
+                <span class="avatar">D</span><span>{{ site.title }}</span>
+              </div>
 
-        <article class="post-card">
-          <div class="post-media">
-            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80" alt="">
-          </div>
-          <div class="post-body">
-            <div class="post-meta">
-              <span class="avatar">D</span><span>Don't Waste My Time</span>
+              <h2 class="post-title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </h2>
+
+              <p class="post-excerpt">{{ post.excerpt }}</p>
             </div>
-            <h2 class="post-title">Zeitverschwendung im Alltag vermeiden: Tipps und Tricks</h2>
-            <p class="post-excerpt">In der heutigen schnelllebigen Welt fühlen sich viele Menschen überfordert und haben das Gefühl…</p>
-          </div>
-        </article>
+          </article>
+        {% endfor %}
       </div>
     </section>
 
@@ -167,4 +148,5 @@ layout: none
   <script src="main.js"></script>
 </body>
 </html>
+
 
